@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "queuectl"
+version = "0.1.0"
+description = "A minimal, production-grade CLI job queue system using Python and SQLite."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers =
+# Dependencies required by the project [5, 11, 12]
+dependencies = [
+    "click",
+    "rich",
+    "rich-click"
+]
+
+# This section creates the 'queuectl' command and points it
+# to the 'main' function inside the 'queuectl.cli' module. [2, 4, 10]
+[project.scripts]
+queuectl = "queuectl.cli:main"
